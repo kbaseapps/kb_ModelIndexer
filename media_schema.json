@@ -1,0 +1,29 @@
+{
+  "schema": {
+    "name": {
+      "type": "text"
+    },
+    "Aerobic": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "keyword"
+    },
+    "external_source_id": {
+      "type": "text"
+    },
+    "Denfined": {
+      "type": "boolean"
+    },
+    "mediacompounds": {
+      "type": "integer"
+    },
+    "id": {
+      "type": "keyword"
+    },
+    "Minimal": {
+      "type": "boolean"
+    }
+  }
+}
+

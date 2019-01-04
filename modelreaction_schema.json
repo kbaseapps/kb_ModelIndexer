@@ -1,0 +1,17 @@
+{
+  "schema": {
+    "pathway": {
+      "type": "keyword"
+    },
+    "id": {
+      "type": "keyword"
+    },
+    "name": {
+      "type": "text"
+    },
+    "aliases": {
+      "type": "keyword"
+    }
+  }
+}
+

@@ -1,0 +1,26 @@
+{
+  "schema": {
+    "compound_ref": {
+      "type": "keyword"
+    },
+    "inchikey": {
+      "type": "keyword"
+    },
+    "name": {
+      "type": "text"
+    },
+    "maxFlux": {
+      "type": "double"
+    },
+    "minFlux": {
+      "type": "double"
+    },
+    "concentration": {
+      "type": "double"
+    },
+    "id": {
+      "type": "keyword"
+    }
+  }
+}
+

@@ -1,0 +1,11 @@
+{
+  "schema": {
+    "feature_refs": {
+      "type": "keyword"
+    },
+    "role": {
+      "type": "keyword"
+    }
+  }
+}
+

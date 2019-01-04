@@ -1,0 +1,746 @@
+{
+  "data": [
+    {
+      "data": {
+        "__VERSION__": 1,
+        "id": "altered_media",
+        "isDefined": 1,
+        "isMinimal": 0,
+        "mediacompounds": [
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd03424",
+            "concentration": 0.001,
+            "id": "cpd03424",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Vitamin B12",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00215",
+            "concentration": 0.001,
+            "id": "cpd00215",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Pyridoxal",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00028",
+            "concentration": 0.001,
+            "id": "cpd00028",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Heme",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd10515",
+            "concentration": 0.001,
+            "id": "cpd10515",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Fe2+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00030",
+            "concentration": 0.001,
+            "id": "cpd00030",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Mn2+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00149",
+            "concentration": 0.001,
+            "id": "cpd00149",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Co2+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00058",
+            "concentration": 0.001,
+            "id": "cpd00058",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Cu2+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00099",
+            "concentration": 0.001,
+            "id": "cpd00099",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Cl-",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00007",
+            "concentration": 0.001,
+            "id": "cpd00007",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "O2",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00034",
+            "concentration": 0.001,
+            "id": "cpd00034",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Zn2+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00156",
+            "concentration": 0.001,
+            "id": "cpd00156",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Valine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00249",
+            "concentration": 0.001,
+            "id": "cpd00249",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Uridine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00092",
+            "concentration": 0.001,
+            "id": "cpd00092",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Uracil",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00069",
+            "concentration": 0.001,
+            "id": "cpd00069",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Tyrosine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00065",
+            "concentration": 0.001,
+            "id": "cpd00065",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Tryptophan",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00184",
+            "concentration": 0.001,
+            "id": "cpd00184",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Thymidine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00161",
+            "concentration": 0.001,
+            "id": "cpd00161",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Threonine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00048",
+            "concentration": 0.001,
+            "id": "cpd00048",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Sulfate",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00054",
+            "concentration": 0.001,
+            "id": "cpd00054",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Serine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00220",
+            "concentration": 0.001,
+            "id": "cpd00220",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Riboflavin",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00129",
+            "concentration": 0.001,
+            "id": "cpd00129",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Proline",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00644",
+            "concentration": 0.001,
+            "id": "cpd00644",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "PAN",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00009",
+            "concentration": 0.001,
+            "id": "cpd00009",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Phosphate",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00066",
+            "concentration": 0.001,
+            "id": "cpd00066",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Phenylalanine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00218",
+            "concentration": 0.001,
+            "id": "cpd00218",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Niacin",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00971",
+            "concentration": 0.001,
+            "id": "cpd00971",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Na+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00254",
+            "concentration": 0.001,
+            "id": "cpd00254",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Mg",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00060",
+            "concentration": 0.001,
+            "id": "cpd00060",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Methionine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00039",
+            "concentration": 0.001,
+            "id": "cpd00039",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Lysine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00107",
+            "concentration": 0.001,
+            "id": "cpd00107",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Leucine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00205",
+            "concentration": 0.001,
+            "id": "cpd00205",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "K+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00246",
+            "concentration": 0.001,
+            "id": "cpd00246",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Inosine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00322",
+            "concentration": 0.001,
+            "id": "cpd00322",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Isoleucine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00226",
+            "concentration": 0.001,
+            "id": "cpd00226",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "HYXN",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00119",
+            "concentration": 0.001,
+            "id": "cpd00119",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Histidine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00531",
+            "concentration": 0.001,
+            "id": "cpd00531",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Hg2+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00001",
+            "concentration": 0.001,
+            "id": "cpd00001",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "H2O",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00067",
+            "concentration": 0.001,
+            "id": "cpd00067",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "H+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00033",
+            "concentration": 0.001,
+            "id": "cpd00033",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Glycine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00023",
+            "concentration": 0.001,
+            "id": "cpd00023",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Glutamate",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00027",
+            "concentration": 0.001,
+            "id": "cpd00027",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "D-Glucose",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00393",
+            "concentration": 0.001,
+            "id": "cpd00393",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Folate",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd10516",
+            "concentration": 0.001,
+            "id": "cpd10516",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "fe3",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00654",
+            "concentration": 0.001,
+            "id": "cpd00654",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Deoxycytidine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00438",
+            "concentration": 0.001,
+            "id": "cpd00438",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Deoxyadenosine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00381",
+            "concentration": 0.001,
+            "id": "cpd00381",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Cystine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd11595",
+            "concentration": 0.001,
+            "id": "cpd11595",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "chromate",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd01012",
+            "concentration": 0.001,
+            "id": "cpd01012",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Cd2+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00063",
+            "concentration": 0.001,
+            "id": "cpd00063",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Ca2+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00041",
+            "concentration": 0.001,
+            "id": "cpd00041",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Aspartate",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd01048",
+            "concentration": 0.001,
+            "id": "cpd01048",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Arsenate",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00051",
+            "concentration": 0.001,
+            "id": "cpd00051",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Arginine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00035",
+            "concentration": 0.001,
+            "id": "cpd00035",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "L-Alanine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00182",
+            "concentration": 0.001,
+            "id": "cpd00182",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Adenosine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00311",
+            "concentration": 0.001,
+            "id": "cpd00311",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Guanosine",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00126",
+            "concentration": 0.001,
+            "id": "cpd00126",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "GMP",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00018",
+            "concentration": 0.001,
+            "id": "cpd00018",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "AMP",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00091",
+            "concentration": 0.001,
+            "id": "cpd00091",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "UMP",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00046",
+            "concentration": 0.001,
+            "id": "cpd00046",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "CMP",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00793",
+            "concentration": 0.001,
+            "id": "cpd00793",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Thiamine phosphate",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00541",
+            "concentration": 0.001,
+            "id": "cpd00541",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Lipoate",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00239",
+            "concentration": 0.001,
+            "id": "cpd00239",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "H2S",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00013",
+            "concentration": 0.001,
+            "id": "cpd00013",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "NH3",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd00244",
+            "concentration": 0.001,
+            "id": "cpd00244",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Ni2+",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "6/4/1/compounds/id/cpd11574",
+            "concentration": 0.001,
+            "id": "cpd11574",
+            "inchikey": "",
+            "maxFlux": 100,
+            "minFlux": -100,
+            "name": "Molybdate",
+            "smiles": ""
+          },
+          {
+            "compound_ref": "kbase/default/compounds/id/cpd03639",
+            "concentration": 0.001,
+            "id": "cpd03639",
+            "inchikey": "",
+            "maxFlux": -100,
+            "minFlux": 100,
+            "name": "Hexan-1-ol-6-oate",
+            "smiles": ""
+          }
+        ],
+        "name": "altered_media",
+        "reagents": [],
+        "source_id": "ArgonneLBMedia_FIXED",
+        "type": "unknown"
+      },
+      "info": [
+        4,
+        "altered_media",
+        "KBaseBiochem.Media-4.1",
+        "2018-10-04T17:29:10+0000",
+        1,
+        "bsadkhin",
+        36815,
+        "jjeffryes:narrative_1538673476981",
+        "4ef8579a15bcf329ef449c15f455be94",
+        10557,
+        {
+          "Is Minimal": "0",
+          "Source ID": "ArgonneLBMedia_FIXED",
+          "Is Defined": "1",
+          "Number compounds": "66",
+          "Name": "altered_media"
+        }
+      ],
+      "path": [
+        "36815/4/1"
+      ],
+      "provenance": [
+        {
+          "service": "fba_tools",
+          "method": "edit_media",
+          "method_params": [
+            {
+              "compounds_to_add": [
+                {
+                  "add_maxflux": 100,
+                  "add_id": "cpd03639",
+                  "add_minflux": -100,
+                  "add_concentration": 0.001
+                }
+              ],
+              "atmosphere": null,
+              "media_id": "36815/3/1",
+              "isDefined": 1,
+              "type": "unknown",
+              "source_id": null,
+              "source": null,
+              "media_output_id": "altered_media",
+              "temperature": null,
+              "atmosphere_addition": null,
+              "name": null,
+              "workspace": "jjeffryes:narrative_1538673476981",
+              "media_workspace": "jjeffryes:narrative_1538673476981",
+              "pH_data": null,
+              "protocol_link": null,
+              "compounds_to_remove": [],
+              "compounds_to_change": []
+            }
+          ],
+          "input_ws_objects": [],
+          "resolved_ws_objects": [],
+          "external_data": [],
+          "subactions": [],
+          "custom": {}
+        }
+      ],
+      "creator": "bsadkhin",
+      "orig_wsid": 36815,
+      "created": "2018-10-04T17:29:10+0000",
+      "epoch": 1538674150938,
+      "refs": [],
+      "copy_source_inaccessible": 0,
+      "extracted_ids": {}
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "data": {
+        "id": "Shewanella_SB2B.reanno",
+        "scientific_name": "Shewanella amazonensis SB2B",
+        "taxonomy": "cellular organisms; Bacteria; Proteobacteria; Gammaproteobacteria; Alteromonadales; Shewanellaceae; Shewanella; Shewanella amazonensis"
+      },
+      "info": [
+        15,
+        "Shewanella_SB2B.reanno",
+        "KBaseGenomes.Genome-12.3",
+        "2017-01-20T17:47:06+0000",
+        1,
+        "chenry",
+        16174,
+        "chenry:1484863241748",
+        "0934040ba77cf30e5d0917bd4f8658d3",
+        15585708,
+        {
+          "GC content": "0.536",
+          "Genetic code": "11",
+          "Close genomes": "30",
+          "Taxonomy": "cellular organisms; Bacteria; Proteobacteria; Gammaproteobacteria; Alteromonadales; Shewanellaceae; Shewanella; Shewanella amazonensis",
+          "Source ID": "NC_008700",
+          "Number features": "3669",
+          "Number contigs": "1",
+          "Domain": "Bacteria",
+          "Source": "RefSeq",
+          "Name": "Shewanella amazonensis SB2B",
+          "MD5": "fd1efe296f0047ec8b0f2e9806416032"
+        }
+      ],
+      "path": [
+        "16174/15/1"
+      ],
+      "provenance": [
+        {
+          "time": "2017-01-20T17:46:30+0000",
+          "epoch": 1484934390000,
+          "service": "RAST_SDK",
+          "service_ver": "1",
+          "method": "annotate_genome",
+          "method_params": [
+            {
+              "domain": "Bacteria",
+              "kmer_v1_parameters": 1,
+              "genetic_code": 11,
+              "call_features_CDS_prodigal": 0,
+              "call_features_rRNA_SEED": 0,
+              "call_features_insertion_sequences": 0,
+              "input_genome": "Shewanella_SB2B",
+              "call_features_strep_pneumo_repeat": 0,
+              "call_selenoproteins": 0,
+              "retain_old_anno_for_hypotheticals": 0,
+              "annotate_proteins_similarity": 1,
+              "scientific_name": "Shewanella amazonensis SB2B",
+              "find_close_neighbors": 1,
+              "call_features_repeat_region_SEED": 0,
+              "call_pyrrolysoproteins": 0,
+              "call_features_strep_suis_repeat": 0,
+              "workspace": "chenry:1484863241748",
+              "call_features_crispr": 0,
+              "annotate_proteins_kmer_v2": 1,
+              "call_features_CDS_genemark": 1,
+              "call_features_prophage_phispy": 0,
+              "call_features_tRNA_trnascan": 0,
+              "input_contigset": null,
+              "call_features_CDS_glimmer3": 0,
+              "output_genome": "Shewanella_SB2B.reanno",
+              "resolve_overlapping_features": 0
+            }
+          ],
+          "input_ws_objects": [],
+          "resolved_ws_objects": [],
+          "intermediate_incoming": [],
+          "intermediate_outgoing": [],
+          "external_data": [],
+          "subactions": [],
+          "custom": {}
+        }
+      ],
+      "creator": "chenry",
+      "orig_wsid": 16174,
+      "created": "2017-01-20T17:47:06+0000",
+      "epoch": 1484934426920,
+      "refs": [
+        "16174/5/1",
+        "1779/546145/3"
+      ],
+      "copy_source_inaccessible": 0,
+      "extracted_ids": {
+        "handle": [
+          "KBH_119990"
+        ]
+      }
+    }
+  ]
+}

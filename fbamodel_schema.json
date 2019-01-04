@@ -1,0 +1,38 @@
+{
+  "schema": {
+    "name": {
+      "type": "text"
+    },
+    "source": {
+      "type": "text"
+    },
+    "scientific_name": {
+      "type": "text"
+    },
+    "modelcompounds": {
+      "type": "integer"
+    },
+    "genome_guid": {
+      "type": "keyword"
+    },
+    "modelcompartments": {
+      "type": "integer"
+    },
+    "taxonomy": {
+      "type": "text"
+    },
+    "genome_name": {
+      "type": "text"
+    },
+    "type": {
+      "type": "keyword"
+    },
+    "id": {
+      "type": "keyword"
+    },
+    "modelreactions": {
+      "type": "integer"
+    }
+  }
+}
+
