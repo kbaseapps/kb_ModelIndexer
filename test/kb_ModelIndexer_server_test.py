@@ -12,6 +12,7 @@ from installed_clients.WorkspaceClient import Workspace
 from unittest.mock import Mock
 import json
 
+
 class kb_ModelIndexerTest(unittest.TestCase):
 
     @classmethod
@@ -26,9 +27,10 @@ class kb_ModelIndexerTest(unittest.TestCase):
         cls.cfg['workspace-admin-token'] = token
 
         # Getting username from Auth profile for token
-        authServiceUrl = cls.cfg['auth-service-url']
-        auth_client = _KBaseAuth(authServiceUrl)
-        user_id = auth_client.get_user(token)
+        # authServiceUrl = cls.cfg['auth-service-url']
+        # auth_client = _KBaseAuth(authServiceUrl)
+        # user_id = auth_client.get_user(token)
+        user_id = 'bogus'
         # WARNING: don't call any logging methods on the context object,
         # it'll result in a NoneType error
         cls.ctx = MethodContext(None)
@@ -82,6 +84,27 @@ class kb_ModelIndexerTest(unittest.TestCase):
     def getContext(self):
         return self.__class__.ctx
 
+    def _validate(self, sfile, data):
+        with open(self.test_dir + '/../' + sfile) as f:
+            d = f.read()
+
+        schema = json.loads(d)
+        for key in schema['schema'].keys():
+            self.assertIn(key, data)
+
+    def _validate_features(self, sfile, data, plist):
+        with open(self.test_dir + '/../' + sfile) as f:
+            d = f.read()
+        feature = data['features'][0]
+        parent = data['parent']
+
+        schema = json.loads(d)
+        for key in schema['schema'].keys():
+            if key in plist:
+                self.assertIn(key, parent)
+            else:
+                self.assertIn(key, feature)
+
     # NOTE: According to Python unittest naming rules test method names should start from 'test'. # noqa
     def test_mappings(self):
         ret = self.getImpl().fbamodel_mapping(self.getContext(), {})
@@ -113,24 +136,31 @@ class kb_ModelIndexerTest(unittest.TestCase):
         ret = impl.media_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('data', ret[0])
+        self._validate('media_schema.json', ret[0]['data'])
         ret = impl.media_compound_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('features', ret[0])
+        self._validate_features('media_compound_schema.json', ret[0], [])
 
         impl.indexer.ws.get_objects2.return_value = self.fbamodelobj
         impl.indexer.ws.get_objects2.side_effect = [self.fbamodelobj, self.gensubobj]
         ret = impl.fbamodel_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('data', ret[0])
+        self._validate('fbamodel_schema.json', ret[0]['data'])
 
         impl.indexer.ws.get_objects2.return_value = self.fbamodelobj
         impl.indexer.ws.get_objects2.side_effect = None
         ret = impl.modelcompound_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('features', ret[0])
+        self._validate_features('modelcompound_schema.json', ret[0], [])
         ret = impl.modelreaction_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('features', ret[0])
+        self._validate_features('modelreaction_schema.json', ret[0], [])
         ret = impl.modelreactionproteinsubunit_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('features', ret[0])
+        schema_file = 'modelreactionproteinsubunit_schema.json'
+        self._validate_features(schema_file, ret[0], [])
