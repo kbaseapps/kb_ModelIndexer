@@ -65,7 +65,7 @@ class ModelIndexer:
         data = obj['data']
         rec = dict()
         for k in ['id', 'name', 'source', 'type']:
-            rec[k] = data[k]
+            rec[k] = data.get(k)
         rec['modelcompartments'] = len(data['modelcompartments'])
         rec['modelcompounds'] = len(data['modelcompounds'])
         rec['modelreactions'] = len(data['modelreactions'])
@@ -77,7 +77,7 @@ class ModelIndexer:
         gdata = self.ws.get_objects2({'objects': [req]})['data'][0]['data']
         rec['genome_guid'] = genome_ref
         rec['scientific_name'] = gdata['scientific_name']
-        rec['taxonomy'] = gdata['taxonomy']
+        rec['taxonomy'] = gdata.get('taxonomy')
         rec['genome_name'] = gdata['id']
         return {'data': rec}
 
