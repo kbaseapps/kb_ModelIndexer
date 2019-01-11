@@ -41,12 +41,17 @@ class ModelIndexer:
         features_rec = []
         for feature in data['mediacompounds']:
             frec = {}
-            for k in ['compound_ref', 'id', 'name', 'inchikey']:
+            for k in ['compound_ref', 'name', 'inchikey']:
                 frec[k] = feature.get(k)
+            if 'id' in feature:
+                id = feature['id']
+            else:
+                id = feature['compound_ref'].split('/')[-1]
+            frec['id'] = id
             frec['concentration'] = float(feature['concentration'])
             frec['minFlux'] = float(feature['minFlux'])
             frec['maxFlux'] = float(feature['maxFlux'])
-            frec['guid'] = '%s:%s' % (self._guid(upa), feature['id'])
+            frec['guid'] = '%s:%s' % (self._guid(upa), id)
             features_rec.append(frec)
             # "compound_ref": "6/4/1/compounds/id/cpd00244",
             # "concentration": 0.001,

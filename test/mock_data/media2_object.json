@@ -1,0 +1,191 @@
+{
+    "data": [
+        {
+            "data": {
+                "__VERSION__": 1,
+                "id": "kb|media.3688",
+                "isDefined": 0,
+                "isMinimal": 0,
+                "mediacompounds": [
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00036",
+                        "concentration": 0.001,
+                        "maxFlux": 5,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00013",
+                        "concentration": 0.001,
+                        "maxFlux": 5,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00009",
+                        "concentration": 0.001,
+                        "maxFlux": 5,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00048",
+                        "concentration": 0.001,
+                        "maxFlux": 5,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00063",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00011",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd10516",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00067",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00001",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00205",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00254",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00971",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00007",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00099",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00058",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00149",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00030",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00034",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd10515",
+                        "concentration": 0.001,
+                        "maxFlux": 100,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00104",
+                        "concentration": 0.001,
+                        "maxFlux": 0.1,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00218",
+                        "concentration": 0.001,
+                        "maxFlux": 0.1,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd00305",
+                        "concentration": 0.001,
+                        "maxFlux": 0.1,
+                        "minFlux": -100
+                    },
+                    {
+                        "compound_ref": "6/4/1/compounds/id/cpd08021",
+                        "concentration": 0.001,
+                        "maxFlux": 0.1,
+                        "minFlux": -100
+                    }
+                ],
+                "name": "Rsp-minimal",
+                "source_id": "Rsp-minimal",
+                "type": "custom"
+            },
+            "info": [
+                23,
+                "Rsp-minimal",
+                "KBaseBiochem.Media-1.0",
+                "2015-01-15T20:11:10+0000",
+                1,
+                "scanon",
+                4,
+                "scanon:myws",
+                "859afd0accb60fefc0ce2b0e5e79695b",
+                2394,
+                {}
+            ],
+            "path": [
+                "4/23/1"
+            ],
+            "provenance": [
+                {
+                    "service": "Workspace",
+                    "service_ver": "0.3.3",
+                    "script": "ws-load",
+                    "script_command_line": "ws-load  KBaseBiochem.Media-1.0 Rsp-minimal tmp.out",
+                    "input_ws_objects": [],
+                    "resolved_ws_objects": [],
+                    "external_data": [],
+                    "subactions": [],
+                    "custom": {}
+                }
+            ],
+            "creator": "kbasetest",
+            "created": "2015-01-15T19:20:07+0000",
+            "epoch": 1421349607587,
+            "refs": [],
+            "copied": "15/4/1",
+            "copy_source_inaccessible": 0,
+            "extracted_ids": {}
+        }
+    ]
+}

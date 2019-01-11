@@ -142,6 +142,17 @@ class kb_ModelIndexerTest(unittest.TestCase):
         self.assertIn('features', ret[0])
         self._validate_features('media_compound_schema.json', ret[0], [])
 
+        m2 = self.read_mock('media2_object.json')
+        impl.indexer.ws.get_objects2.return_value = m2
+        ret = impl.media_index(self.getContext(), params)
+        self.assertIsNotNone(ret[0])
+        self.assertIn('data', ret[0])
+        self._validate('media_schema.json', ret[0]['data'])
+        ret = impl.media_compound_index(self.getContext(), params)
+        self.assertIsNotNone(ret[0])
+        self.assertIn('features', ret[0])
+        self._validate_features('media_compound_schema.json', ret[0], [])
+
         impl.indexer.ws.get_objects2.return_value = self.fbamodelobj
         impl.indexer.ws.get_objects2.side_effect = [self.fbamodelobj, self.gensubobj]
         ret = impl.fbamodel_index(self.getContext(), params)
