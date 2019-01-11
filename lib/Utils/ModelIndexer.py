@@ -42,7 +42,7 @@ class ModelIndexer:
         for feature in data['mediacompounds']:
             frec = {}
             for k in ['compound_ref', 'id', 'name', 'inchikey']:
-                frec[k] = feature[k]
+                frec[k] = feature.get(k)
             frec['concentration'] = float(feature['concentration'])
             frec['minFlux'] = float(feature['minFlux'])
             frec['maxFlux'] = float(feature['maxFlux'])
