@@ -106,27 +106,6 @@ class kb_ModelIndexerTest(unittest.TestCase):
                 self.assertIn(key, feature)
 
     # NOTE: According to Python unittest naming rules test method names should start from 'test'. # noqa
-    def test_mappings(self):
-        ret = self.getImpl().fbamodel_mapping(self.getContext(), {})
-        self.assertIsNotNone(ret[0])
-
-        ret = self.getImpl().media_mapping(self.getContext(), {})
-        self.assertIsNotNone(ret[0])
-
-        ret = self.getImpl().media_compound_mapping(self.getContext(), {})
-        self.assertIsNotNone(ret[0])
-
-        ret = self.getImpl().modelcompound_mapping(self.getContext(), {})
-        self.assertIsNotNone(ret[0])
-
-        ret = self.getImpl().modelreaction_mapping(self.getContext(), {})
-        self.assertIsNotNone(ret[0])
-
-        ret = self.getImpl().modelreactionproteinsubunit_mapping(self.getContext(), {})
-        self.assertIsNotNone(ret[0])
-
-
-    # NOTE: According to Python unittest naming rules test method names should start from 'test'. # noqa
     def test_indexers(self):
         impl = self.getImpl()
         params = {'upa': '1/2/3'}
@@ -136,10 +115,12 @@ class kb_ModelIndexerTest(unittest.TestCase):
         ret = impl.media_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('data', ret[0])
+        self.assertIn('schema', ret[0])
         self._validate('media_schema.json', ret[0]['data'])
         ret = impl.media_compound_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('features', ret[0])
+        self.assertIn('schema', ret[0])
         self._validate_features('media_compound_schema.json', ret[0], [])
 
         m2 = self.read_mock('media2_object.json')
@@ -147,10 +128,12 @@ class kb_ModelIndexerTest(unittest.TestCase):
         ret = impl.media_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('data', ret[0])
+        self.assertIn('schema', ret[0])
         self._validate('media_schema.json', ret[0]['data'])
         ret = impl.media_compound_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('features', ret[0])
+        self.assertIn('schema', ret[0])
         self._validate_features('media_compound_schema.json', ret[0], [])
 
         impl.indexer.ws.get_objects2.return_value = self.fbamodelobj
@@ -158,6 +141,7 @@ class kb_ModelIndexerTest(unittest.TestCase):
         ret = impl.fbamodel_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('data', ret[0])
+        self.assertIn('schema', ret[0])
         self._validate('fbamodel_schema.json', ret[0]['data'])
 
         impl.indexer.ws.get_objects2.return_value = self.fbamodelobj
@@ -165,13 +149,16 @@ class kb_ModelIndexerTest(unittest.TestCase):
         ret = impl.modelcompound_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('features', ret[0])
+        self.assertIn('schema', ret[0])
         self._validate_features('modelcompound_schema.json', ret[0], [])
         ret = impl.modelreaction_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('features', ret[0])
+        self.assertIn('schema', ret[0])
         self._validate_features('modelreaction_schema.json', ret[0], [])
         ret = impl.modelreactionproteinsubunit_index(self.getContext(), params)
         self.assertIsNotNone(ret[0])
         self.assertIn('features', ret[0])
+        self.assertIn('schema', ret[0])
         schema_file = 'modelreactionproteinsubunit_schema.json'
         self._validate_features(schema_file, ret[0], [])

@@ -342,50 +342,26 @@ class Application(object):
                              name='kb_ModelIndexer.fbamodel_index',
                              types=[dict])
         self.method_authentication['kb_ModelIndexer.fbamodel_index'] = 'required'  # noqa
-        self.rpc_service.add(impl_kb_ModelIndexer.fbamodel_mapping,
-                             name='kb_ModelIndexer.fbamodel_mapping',
-                             types=[dict])
-        self.method_authentication['kb_ModelIndexer.fbamodel_mapping'] = 'required'  # noqa
         self.rpc_service.add(impl_kb_ModelIndexer.media_index,
                              name='kb_ModelIndexer.media_index',
                              types=[dict])
         self.method_authentication['kb_ModelIndexer.media_index'] = 'required'  # noqa
-        self.rpc_service.add(impl_kb_ModelIndexer.media_mapping,
-                             name='kb_ModelIndexer.media_mapping',
-                             types=[dict])
-        self.method_authentication['kb_ModelIndexer.media_mapping'] = 'required'  # noqa
         self.rpc_service.add(impl_kb_ModelIndexer.media_compound_index,
                              name='kb_ModelIndexer.media_compound_index',
                              types=[dict])
         self.method_authentication['kb_ModelIndexer.media_compound_index'] = 'required'  # noqa
-        self.rpc_service.add(impl_kb_ModelIndexer.media_compound_mapping,
-                             name='kb_ModelIndexer.media_compound_mapping',
-                             types=[dict])
-        self.method_authentication['kb_ModelIndexer.media_compound_mapping'] = 'required'  # noqa
         self.rpc_service.add(impl_kb_ModelIndexer.modelreaction_index,
                              name='kb_ModelIndexer.modelreaction_index',
                              types=[dict])
         self.method_authentication['kb_ModelIndexer.modelreaction_index'] = 'required'  # noqa
-        self.rpc_service.add(impl_kb_ModelIndexer.modelreaction_mapping,
-                             name='kb_ModelIndexer.modelreaction_mapping',
-                             types=[dict])
-        self.method_authentication['kb_ModelIndexer.modelreaction_mapping'] = 'required'  # noqa
         self.rpc_service.add(impl_kb_ModelIndexer.modelcompound_index,
                              name='kb_ModelIndexer.modelcompound_index',
                              types=[dict])
         self.method_authentication['kb_ModelIndexer.modelcompound_index'] = 'required'  # noqa
-        self.rpc_service.add(impl_kb_ModelIndexer.modelcompound_mapping,
-                             name='kb_ModelIndexer.modelcompound_mapping',
-                             types=[dict])
-        self.method_authentication['kb_ModelIndexer.modelcompound_mapping'] = 'required'  # noqa
         self.rpc_service.add(impl_kb_ModelIndexer.modelreactionproteinsubunit_index,
                              name='kb_ModelIndexer.modelreactionproteinsubunit_index',
                              types=[dict])
         self.method_authentication['kb_ModelIndexer.modelreactionproteinsubunit_index'] = 'required'  # noqa
-        self.rpc_service.add(impl_kb_ModelIndexer.modelreactionproteinsubunit_mapping,
-                             name='kb_ModelIndexer.modelreactionproteinsubunit_mapping',
-                             types=[dict])
-        self.method_authentication['kb_ModelIndexer.modelreactionproteinsubunit_mapping'] = 'required'  # noqa
         self.rpc_service.add(impl_kb_ModelIndexer.status,
                              name='kb_ModelIndexer.status',
                              types=[dict])

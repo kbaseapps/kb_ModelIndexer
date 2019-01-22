@@ -31,7 +31,8 @@ class ModelIndexer:
         rec['Denfined'] = self._tf(data['isDefined'])
         rec['Minimal'] = self._tf(data['isMinimal'])
         rec['Aerobic'] = self._tf(data.get('isAerobic', False))
-        return {'data': rec}
+        schema = self.mapping('media_schema.json')
+        return {'data': rec, 'schema': schema}
 
     def media_compound_index(self, upa):
         obj = self.ws.get_objects2({'objects': [{'ref': upa}]})['data'][0]
@@ -63,6 +64,7 @@ class ModelIndexer:
             # "smiles": ""
 
         rec['features'] = features_rec
+        rec['schema'] = self.mapping('media_compound_schema.json')
         return rec
 
     def fbamodel_index(self, upa):
@@ -84,7 +86,8 @@ class ModelIndexer:
         rec['scientific_name'] = gdata['scientific_name']
         rec['taxonomy'] = gdata.get('taxonomy')
         rec['genome_name'] = gdata['id']
-        return {'data': rec}
+        schema = self.mapping('fbamodel_schema.json')
+        return {'data': rec, 'schema': schema}
 
     def modelcompound_index(self, upa):
         obj = self.ws.get_objects2({'objects': [{'ref': upa}]})['data'][0]
@@ -101,6 +104,8 @@ class ModelIndexer:
             features_rec.append(frec)
 
         rec['features'] = features_rec
+        rec['schema'] = self.mapping('modelcompound_schema.json')
+
         return rec
 
     def modelreaction_index(self, upa):
@@ -118,6 +123,7 @@ class ModelIndexer:
             features_rec.append(frec)
 
         rec['features'] = features_rec
+        rec['schema'] = self.mapping('modelreaction_schema.json')
         return rec
 
     def modelreactionproteinsubunit_index(self, upa):
@@ -139,6 +145,7 @@ class ModelIndexer:
                     frec['guid'] = '%s:%s' % (self._guid(upa), h)
                     features_rec.append(frec)
         rec['features'] = features_rec
+        rec['schema'] = self.mapping('modelreactionproteinsubunit_schema.json')
         return rec
 
     def mapping(self, filename):

@@ -20,8 +20,8 @@ class kb_ModelIndexer:
     # the latter method is running.
     ######################################### noqa
     VERSION = "0.0.1"
-    GIT_URL = ""
-    GIT_COMMIT_HASH = "HEAD"
+    GIT_URL = "git@github.com:kbaseapps/kb_ModelIndexer.git"
+    GIT_COMMIT_HASH = "76f79b5b94293f0f26e236915cdc01ea08cfb90b"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER
@@ -57,25 +57,6 @@ class kb_ModelIndexer:
         # return the results
         return [output]
 
-    def fbamodel_mapping(self, ctx, params):
-        """
-        :param params: instance of mapping from String to unspecified object
-        :returns: instance of type "Results" -> structure: parameter
-           "file_name" of String, parameter "index" of unspecified object
-        """
-        # ctx is the context object
-        # return variables are: output
-        #BEGIN fbamodel_mapping
-        output = self.indexer.mapping('fbamodel_schema.json')
-        #END fbamodel_mapping
-
-        # At some point might do deeper type checking...
-        if not isinstance(output, dict):
-            raise ValueError('Method fbamodel_mapping return value ' +
-                             'output is not type dict as required.')
-        # return the results
-        return [output]
-
     def media_index(self, ctx, params):
         """
         :param params: instance of mapping from String to unspecified object
@@ -91,25 +72,6 @@ class kb_ModelIndexer:
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
             raise ValueError('Method media_index return value ' +
-                             'output is not type dict as required.')
-        # return the results
-        return [output]
-
-    def media_mapping(self, ctx, params):
-        """
-        :param params: instance of mapping from String to unspecified object
-        :returns: instance of type "Results" -> structure: parameter
-           "file_name" of String, parameter "index" of unspecified object
-        """
-        # ctx is the context object
-        # return variables are: output
-        #BEGIN media_mapping
-        output = self.indexer.mapping('media_schema.json')
-        #END media_mapping
-
-        # At some point might do deeper type checking...
-        if not isinstance(output, dict):
-            raise ValueError('Method media_mapping return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]
@@ -133,25 +95,6 @@ class kb_ModelIndexer:
         # return the results
         return [output]
 
-    def media_compound_mapping(self, ctx, params):
-        """
-        :param params: instance of mapping from String to unspecified object
-        :returns: instance of type "Results" -> structure: parameter
-           "file_name" of String, parameter "index" of unspecified object
-        """
-        # ctx is the context object
-        # return variables are: output
-        #BEGIN media_compound_mapping
-        output = self.indexer.mapping('media_compound_schema.json')
-        #END media_compound_mapping
-
-        # At some point might do deeper type checking...
-        if not isinstance(output, dict):
-            raise ValueError('Method media_compound_mapping return value ' +
-                             'output is not type dict as required.')
-        # return the results
-        return [output]
-
     def modelreaction_index(self, ctx, params):
         """
         :param params: instance of mapping from String to unspecified object
@@ -167,25 +110,6 @@ class kb_ModelIndexer:
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
             raise ValueError('Method modelreaction_index return value ' +
-                             'output is not type dict as required.')
-        # return the results
-        return [output]
-
-    def modelreaction_mapping(self, ctx, params):
-        """
-        :param params: instance of mapping from String to unspecified object
-        :returns: instance of type "Results" -> structure: parameter
-           "file_name" of String, parameter "index" of unspecified object
-        """
-        # ctx is the context object
-        # return variables are: output
-        #BEGIN modelreaction_mapping
-        output = self.indexer.mapping('modelreaction_schema.json')
-        #END modelreaction_mapping
-
-        # At some point might do deeper type checking...
-        if not isinstance(output, dict):
-            raise ValueError('Method modelreaction_mapping return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]
@@ -209,25 +133,6 @@ class kb_ModelIndexer:
         # return the results
         return [output]
 
-    def modelcompound_mapping(self, ctx, params):
-        """
-        :param params: instance of mapping from String to unspecified object
-        :returns: instance of type "Results" -> structure: parameter
-           "file_name" of String, parameter "index" of unspecified object
-        """
-        # ctx is the context object
-        # return variables are: output
-        #BEGIN modelcompound_mapping
-        output = self.indexer.mapping('modelcompound_schema.json')
-        #END modelcompound_mapping
-
-        # At some point might do deeper type checking...
-        if not isinstance(output, dict):
-            raise ValueError('Method modelcompound_mapping return value ' +
-                             'output is not type dict as required.')
-        # return the results
-        return [output]
-
     def modelreactionproteinsubunit_index(self, ctx, params):
         """
         :param params: instance of mapping from String to unspecified object
@@ -243,25 +148,6 @@ class kb_ModelIndexer:
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
             raise ValueError('Method modelreactionproteinsubunit_index return value ' +
-                             'output is not type dict as required.')
-        # return the results
-        return [output]
-
-    def modelreactionproteinsubunit_mapping(self, ctx, params):
-        """
-        :param params: instance of mapping from String to unspecified object
-        :returns: instance of type "Results" -> structure: parameter
-           "file_name" of String, parameter "index" of unspecified object
-        """
-        # ctx is the context object
-        # return variables are: output
-        #BEGIN modelreactionproteinsubunit_mapping
-        output = self.indexer.mapping('modelreaction_schema.json')
-        #END modelreactionproteinsubunit_mapping
-
-        # At some point might do deeper type checking...
-        if not isinstance(output, dict):
-            raise ValueError('Method modelreactionproteinsubunit_mapping return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]
