@@ -1,18 +1,14 @@
 # -*- coding: utf-8 -*-
-import unittest
-import os  # noqa: F401
 import json  # noqa: F401
+import os  # noqa: F401
 import time
+import unittest
+from configparser import ConfigParser  # py3
+from os import environ
 from unittest.mock import patch
 
-from os import environ
-from configparser import ConfigParser  # py3
-
-from pprint import pprint  # noqa: F401
-
-from Workspace.WorkspaceClient import Workspace as workspaceService
-# from ModelIndexer.authclient import KBaseAuth as _KBaseAuth
 from Utils.ModelIndexer import ModelIndexer
+from installed_clients.WorkspaceClient import Workspace as workspaceService
 
 
 class ModelIndexerTester(unittest.TestCase):
