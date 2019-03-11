@@ -1,15 +1,15 @@
 # Special Indexer for Narrative Objects
-from Utils.WorkspaceAdminUtils import WorkspaceAdminUtils
 import json
 import os
 from hashlib import sha224
+
+from Utils.WorkspaceAdminUtils import WorkspaceAdminUtils
 
 
 class ModelIndexer:
     def __init__(self, config):
         self.ws = WorkspaceAdminUtils(config)
-        ldir = os.path.dirname(os.path.abspath(__file__))
-        self.schema_dir = '/'.join(ldir.split('/')[0:-2])
+        self.schema_dir = config['schema-dir']
 
     def _tf(self, val):
         if val == 0:
@@ -19,50 +19,40 @@ class ModelIndexer:
 
     def _guid(self, upa):
         (wsid, objid, ver) = upa.split('/')
-        return "WS:%s:%s:%s" % (wsid, objid, ver)
+        return f"WS:{wsid}:{objid}:{ver}"
 
     def media_index(self, upa):
         obj = self.ws.get_objects2({'objects': [{'ref': upa}]})['data'][0]
         data = obj['data']
-        rec = dict()
+        rec = {'mediacompounds': len(data['mediacompounds']),
+               'Denfined': self._tf(data['isDefined']),
+               'Minimal': self._tf(data['isMinimal']),
+               'Aerobic': self._tf(data.get('isAerobic', False))}
         for k in ['id', 'name', 'external_source_id', 'type']:
             rec[k] = data.get(k, '')
-        rec['mediacompounds'] = len(data['mediacompounds'])
-        rec['Denfined'] = self._tf(data['isDefined'])
-        rec['Minimal'] = self._tf(data['isMinimal'])
-        rec['Aerobic'] = self._tf(data.get('isAerobic', False))
         schema = self.mapping('media_schema.json')
         return {'data': rec, 'schema': schema}
 
     def media_compound_index(self, upa):
         obj = self.ws.get_objects2({'objects': [{'ref': upa}]})['data'][0]
         data = obj['data']
-        rec = {}
-        rec['parent'] = {}
+        rec = {'parent': {}}
         features_rec = []
         for feature in data['mediacompounds']:
-            frec = {}
+            if 'id' in feature:
+                _id = feature['id']
+            else:
+                _id = feature['compound_ref'].split('/')[-1]
+
+            frec = {'id': _id,
+                    'concentration': float(feature['concentration']),
+                    'minFlux': float(feature['minFlux']),
+                    'maxFlux': float(feature['maxFlux']),
+                    'guid': f'{self._guid(upa)}:{_id}'}
             for k in ['compound_ref', 'name', 'inchikey']:
                 frec[k] = feature.get(k)
-            if 'id' in feature:
-                id = feature['id']
-            else:
-                id = feature['compound_ref'].split('/')[-1]
-            frec['id'] = id
-            frec['concentration'] = float(feature['concentration'])
-            frec['minFlux'] = float(feature['minFlux'])
-            frec['maxFlux'] = float(feature['maxFlux'])
-            frec['guid'] = '%s:%s' % (self._guid(upa), id)
-            features_rec.append(frec)
-            # "compound_ref": "6/4/1/compounds/id/cpd00244",
-            # "concentration": 0.001,
-            # "id": "cpd00244",
-            # "inchikey": "",
-            # "maxFlux": 100,
-            # "minFlux": -100,
-            # "name": "Ni2+",
-            # "smiles": ""
 
+            features_rec.append(frec)
         rec['features'] = features_rec
         rec['schema'] = self.mapping('media_compound_schema.json')
         return rec
@@ -70,12 +60,11 @@ class ModelIndexer:
     def fbamodel_index(self, upa):
         obj = self.ws.get_objects2({'objects': [{'ref': upa}]})['data'][0]
         data = obj['data']
-        rec = dict()
+        rec = {'modelcompartments': len(data['modelcompartments']),
+               'modelcompounds': len(data['modelcompounds']),
+               'modelreactions': len(data['modelreactions'])}
         for k in ['id', 'name', 'source', 'type']:
             rec[k] = data.get(k)
-        rec['modelcompartments'] = len(data['modelcompartments'])
-        rec['modelcompounds'] = len(data['modelcompounds'])
-        rec['modelreactions'] = len(data['modelreactions'])
         # From genome genome_ref
         genome_ref = data['genome_ref']
         req = {'ref': genome_ref,
@@ -92,34 +81,29 @@ class ModelIndexer:
     def modelcompound_index(self, upa):
         obj = self.ws.get_objects2({'objects': [{'ref': upa}]})['data'][0]
         data = obj['data']
-        rec = dict()
-        rec['parent'] = {}
+        rec = {'parent': {}}
         features_rec = []
         for feature in data['modelcompounds']:
-            frec = {}
+            frec = {'inchikey': feature.get('inchikey', ''),
+                    'guid': f'{self._guid(upa)}:{feature["id"]}'}
             for k in ['id', 'name', 'formula', 'aliases']:
                 frec[k] = feature[k]
-            frec['inchikey'] = feature.get('inchikey', '')
-            frec['guid'] = '%s:%s' % (self._guid(upa), feature['id'])
             features_rec.append(frec)
 
         rec['features'] = features_rec
         rec['schema'] = self.mapping('modelcompound_schema.json')
-
         return rec
 
     def modelreaction_index(self, upa):
         obj = self.ws.get_objects2({'objects': [{'ref': upa}]})['data'][0]
         data = obj['data']
-        rec = dict()
-        rec['parent'] = {}
+        rec = {'parent': {}}
         features_rec = []
         for feature in data['modelreactions']:
-            frec = {}
+            frec = {'pathway': feature.get('pathway', ''),
+                    'guid': f'{self._guid(upa)}:{feature["id"]}'}
             for k in ['id', 'name', 'aliases']:
                 frec[k] = feature[k]
-            frec['pathway'] = feature.get('pathway', '')
-            frec['guid'] = '%s:%s' % (self._guid(upa), feature['id'])
             features_rec.append(frec)
 
         rec['features'] = features_rec
@@ -129,8 +113,7 @@ class ModelIndexer:
     def modelreactionproteinsubunit_index(self, upa):
         obj = self.ws.get_objects2({'objects': [{'ref': upa}]})['data'][0]
         data = obj['data']
-        rec = dict()
-        rec['parent'] = {}
+        rec = {'parent': {}}
         features_rec = []
         for reactions in data['modelreactions']:
             for proteins in reactions['modelReactionProteins']:
@@ -138,11 +121,9 @@ class ModelIndexer:
                     frec = {}
                     for k in ['role', 'feature_refs']:
                         frec[k] = sub[k]
-                    id = '%s:%s:%s' % (reactions['id'],
-                                       proteins['complex_ref'],
-                                       sub['role'])
-                    h = sha224(id.encode('utf-8')).hexdigest()
-                    frec['guid'] = '%s:%s' % (self._guid(upa), h)
+                    _id = f'{reactions["id"]}:{proteins["complex_ref"]}:{sub["role"]}'
+                    h = sha224(_id.encode('utf-8')).hexdigest()
+                    frec['guid'] = f'{self._guid(upa)}:{h}'
                     features_rec.append(frec)
         rec['features'] = features_rec
         rec['schema'] = self.mapping('modelreactionproteinsubunit_schema.json')
